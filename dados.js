@@ -1,5 +1,5 @@
 const alunos6 = [
-  {nome:"Alanis Vitória Couto Veloso","foto":"fotos/alanis1.jpg"},
+  {nome:"Alanis Vitória Couto Veloso","foto":"fotos/Alanis.jpg"},
   {nome:"Ana Beatriz Banadia Brajão","foto":"fotos/ana2.jpg"},
   {nome:"Aysha Radyja Gaeta Donatangelo Teodoro de Godoy","foto":"fotos/aysha3.jpg"},
   {nome:"Arthur Miguel","foto":"fotos/arthur4.jpg"},
