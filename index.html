@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carômetro Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📸 Carômetro Escolar</h1>
+
+  <div id="container"></div>
+
+  <script src="dados.js"></script>
+  <script>
+    const container = document.getElementById("container");
+
+    function criarTurma(nomeTurma, alunos) {
+      const secao = document.createElement("div");
+      secao.className = "turma";
+
+      const titulo = document.createElement("h2");
+      titulo.textContent = nomeTurma;
+      secao.appendChild(titulo);
+
+      const grade = document.createElement("div");
+      grade.className = "grade";
+
+      alunos.forEach(aluno => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+          <img src="${aluno.foto}" alt="${aluno.nome}">
+          <p>${aluno.nome}</p>
+        `;
+
+        grade.appendChild(card);
+      });
+
+      secao.appendChild(grade);
+      container.appendChild(secao);
+    }
+
+    criarTurma("6º Ano", alunos6);
+    criarTurma("7º Ano", alunos7);
+    criarTurma("8º Ano", alunos8);
+    criarTurma("9º Ano", alunos9);
+  </script>
+
+</body>
+</html>
